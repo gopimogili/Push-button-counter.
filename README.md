@@ -1,30 +1,31 @@
 # Push-button-counter.
-#include <DHT.h>
+const int button = 2;
+const int led = 13;
+int count = 0;
 
-#define DHTPIN 4
-#define DHTTYPE DHT22
-
-DHT dht(DHTPIN, DHTTYPE);
+bool lastState = HIGH;
 
 void setup() {
+  pinMode(button, INPUT_PULLUP);
+  pinMode(led, OUTPUT);
   Serial.begin(9600);
-  dht.begin();
 }
 
 void loop() {
-  float temp = dht.readTemperature();
-  float hum = dht.readHumidity();
+  bool currentState = digitalRead(button);
 
-  Serial.print("Temp: ");
-  Serial.print(temp);
-  Serial.print(" °C | ");
+  if (lastState == HIGH && currentState == LOW) {
+    count++;
 
-  Serial.print("Humidity: ");
-  Serial.print(hum);
-  Serial.println(" %");
+    Serial.print("Count: ");
+    Serial.println(count);
 
-  delay(2000);
+    digitalWrite(led, HIGH);
+    delay(200);
+    digitalWrite(led, LOW);
+  }
+
+  lastState = currentState;
 }
-
 #OUTPUT
 <img width="1915" height="919" alt="Image" src="https://github.com/user-attachments/assets/818e4d14-1aa8-44f9-9a76-af0022ebcc10" />
