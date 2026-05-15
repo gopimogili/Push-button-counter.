@@ -27,5 +27,6 @@ void loop() {
 
   lastState = currentState;
 }
+
 #OUTPUT
 <img width="1915" height="919" alt="Image" src="https://github.com/user-attachments/assets/818e4d14-1aa8-44f9-9a76-af0022ebcc10" />
