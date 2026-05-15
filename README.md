@@ -25,5 +25,6 @@ void loop() {
 
   delay(2000);
 }
+
 #OUTPUT
 <img width="1905" height="916" alt="Image" src="https://github.com/user-attachments/assets/1c199752-8488-4b90-ba6d-567a05283c85" />
