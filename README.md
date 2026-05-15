@@ -27,4 +27,4 @@ void loop() {
 }
 
 #OUTPUT
-<img width="1905" height="916" alt="Image" src="https://github.com/user-attachments/assets/1c199752-8488-4b90-ba6d-567a05283c85" />
+<img width="1915" height="919" alt="Image" src="https://github.com/user-attachments/assets/818e4d14-1aa8-44f9-9a76-af0022ebcc10" />
